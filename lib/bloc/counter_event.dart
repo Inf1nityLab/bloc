@@ -1,9 +1,8 @@
 part of 'counter_bloc.dart';
 
+@immutable
+sealed class CounterEvent {}
 
+class PlusEvent extends CounterEvent{}
 
-abstract class CounterEvent {}
-
-class Increment extends CounterEvent {}
-
-class Decrement extends CounterEvent {}
+class MinusEvent extends CounterEvent{}
